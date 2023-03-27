@@ -30,10 +30,10 @@ function ReanimatedButton(): JSX.Element {
 
   const color = useDerivedValue(() => {
     return value
-      ? withTiming(value!, {duration: 1000}, () => {
+      ? withTiming(value, {duration: 1000}, () => {
           setAnimationProgress(false);
         })
-      : value!;
+      : value;
   }, [value]);
 
   const bgStyle = useAnimatedStyle(() => {

@@ -52,7 +52,7 @@ function StyledComponentsButton(): JSX.Element {
     Animated.timing(color, {
       toValue: nextValue!,
       duration: 1000,
-      useNativeDriver: !__DEV__,
+      useNativeDriver: false,
     }).start(() => {
       setAnimationProgress(false);
 
@@ -62,7 +62,7 @@ function StyledComponentsButton(): JSX.Element {
         Animated.timing(color, {
           toValue: 0,
           duration: 0,
-          useNativeDriver: !__DEV__,
+          useNativeDriver: false,
         }).start();
 
         dispatch(

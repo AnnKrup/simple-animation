@@ -48,7 +48,7 @@ function SimpleButton(): JSX.Element {
     Animated.timing(color, {
       toValue: nextValue!,
       duration: 1000,
-      useNativeDriver: !__DEV__,
+      useNativeDriver: false,
     }).start(() => {
       setAnimationProgress(false);
       if (nextValue !== buttonsStates.length - 1) {
@@ -57,7 +57,7 @@ function SimpleButton(): JSX.Element {
         Animated.timing(color, {
           toValue: 0,
           duration: 0,
-          useNativeDriver: !__DEV__,
+          useNativeDriver: false,
         }).start();
 
         dispatch(
